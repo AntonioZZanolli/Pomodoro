@@ -1,38 +1,23 @@
-"use strict"
+let start = document.getElementById('start');
+let display = document.querySelector('#timer');
 
-var mm = 20;
-var ss = 60;
-
-var tempo = 1000; //Quantos milésimos valem 1 segundo
-var cron;
-
-//
-function start() {
-    cron = setInterval(() => {timer(); }, tempo)
+function startTimer(duration, display) {
+    var timer = duration, minutes, seconds;
+    setInterval(function () {
+        minutes = parseInt(timer / 60, 10);
+        seconds = parseInt(timer % 60, 10);
+        minutes = minutes < 10 ? "0" + minutes : minutes;
+        seconds = seconds < 10 ? "0" + seconds : seconds;
+        display.textContent = minutes + ":" + seconds;
+        if (--timer < 0) {
+            timer = duration;
+        }
+    }, 1000);
 }
 
-//
-function pause() {
-    clearInterval(cron);
-}
-
-//
-function stop(){
-    clearInterval(cron);
-    mm = 0;
-    ss = 0;
-
-    document.getElementById('counter').innerText = '20:00'
-}
-
-function timer() {
-    while (ss != 0){
-        ss = 60;
-        ss--;
-    }
-    mm--;
 
 
-    var format = (mm < 10 ? '0' + mm : mm) + ':' + (ss < 10 ? '0' + ss : ss);
-    document.getElementById('counter').innerText = format;
-}
+var duration = 60 * 20; // Converter para segundos
+start.addEventListener("click", startTimer(duration, display));  // iniciando o timer
+
+
