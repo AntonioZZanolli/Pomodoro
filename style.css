@@ -1,0 +1,60 @@
+body,
+h1,
+h2,
+h3,
+ul,
+li,
+p,
+dd,
+dl,
+dt {
+    margin: 0;
+    padding: 0;
+    font-family: 'Lato', sans-serif;
+}
+
+body {
+    background-color: #F5F7F8;
+}
+
+nav {
+    display: flex;
+    justify-content: end;
+
+}
+
+.settings-button {
+    margin: 15px 15px 0 0;
+    font-size: 55px;
+    color: #45474B;
+}
+
+.principal {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.title {
+    font-size: 3rem;
+    font-weight: 700;
+    margin-top: 120px;
+    margin-bottom: 90px;
+    color: #45474B;
+}
+
+.timer-container {
+    padding: 7px 50px;
+    background-color: #F4CE14;
+    margin-bottom: 95px;
+}
+
+.timer {
+    font-size: 3.4375rem;
+    font-weight: 700;
+}
+
+.controller {
+    font-size: 60px;
+    color: #45474B;
+}

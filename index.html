@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@700&display=swap" rel="stylesheet">
+    <title>Pomodoro</title>
+</head>
+
+<body>
+    <nav>
+        <ul>
+            <span class="material-icons settings-button">
+                settings
+            </span>
+        </ul>
+    </nav>
+</body>
+
+<section class="principal">
+    <h1 class="title">POMODORO</h1>
+
+    <div class="timer-container">
+        <h2 class="timer">25 : 00</h2>
+    </div>
+
+    <span onclick="play(1 * 60, document.querySelector('.timer'))" class="material-icons controller">
+        play_circle_filled
+    </span>
+    <span class="material-icons controller">
+        skip_next
+    </span>
+    <span class="material-icons controller">
+        pause
+    </span>
+    <span class="material-icons controller">
+        stop
+    </span>
+</section>
+
+<script src="script.js"></script>
+
+</html>
